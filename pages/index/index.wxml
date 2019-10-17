@@ -1,13 +1,21 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <navigator url="/pages/fullpage/fullpage">{{motto}}</navigator>
-  </view>
+<!--pages/index/index.wxml-->
+<view class='container container-fill'>
+    <view class="scroll-fullpage" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="transform:translateY(-{{scrollindex*100}}%);margin-top: {{margintop}}px">
+        <view class="section section01">
+            <image class="img1 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/1.png'></image>
+            <image class="img2 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/2.png'></image>
+            <image class="img3 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/3.png'></image>
+            <image class="img4 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/4.png'></image>
+            <image class="img5 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/5.png'></image>
+            <image class="img6 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/6.png'></image>
+        </view>
+        <view class="section section02" style="background: #00CC66;">
+			<text class="section-maintitle animated {{scrollindex==1?'bounceInRight':''}}">无缝对接双创服务2</text>
+			<text class="section-subtitle animated {{scrollindex==1?'bounceInLeft':''}}">构筑“云上孵化基地”2</text>
+		</view>
+        <view class="section section03 " style="background: #33CCCC;">
+			<text class="section-maintitle animated {{scrollindex==2?'bounceInLeft':''}}">无缝对接双创服务3</text>
+			<text class="section-subtitle animated {{scrollindex==2?'bounceInLeft':''}}">构筑“云上孵化基地”3</text>
+		</view>
+    </view>
 </view>
