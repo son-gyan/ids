@@ -11,7 +11,7 @@
         </view>
         <view class="section section02" >
             <image class="img1 animated {{scrollindex==1?'bounceInRight':''}}" src='/images/dingyi/1.png'></image>
-            <view class="imgGroup">
+            <view class="imgGroup center">
                 <image class="img2 animated {{scrollindex==1?'bounceInRight':''}}" src='/images/dingyi/2.jpg'></image>
                 <view class="circle {{scrollindex==1?'circle1':''}}">
                     <image class="img5" src='/images/dingyi/5.png'></image>

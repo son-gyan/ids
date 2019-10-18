@@ -83,6 +83,9 @@
 .imgGroup{
     position: relative;
 }
+.center{
+    z-index: 30
+}
 .footImg{ 
     margin-top: 100rpx;
 }
