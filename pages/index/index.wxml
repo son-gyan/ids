@@ -9,9 +9,39 @@
             <image class="img5 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/5.png'></image>
             <image class="img6 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/6.png'></image>
         </view>
-        <view class="section section02" style="background: #00CC66;">
-			<text class="section-maintitle animated {{scrollindex==1?'bounceInRight':''}}">无缝对接双创服务2</text>
-			<text class="section-subtitle animated {{scrollindex==1?'bounceInLeft':''}}">构筑“云上孵化基地”2</text>
+        <view class="section section02" >
+            <image class="img1 animated {{scrollindex==1?'bounceInRight':''}}" src='/images/dingyi/1.png'></image>
+            <view class="imgGroup">
+                <image class="img2 animated {{scrollindex==1?'bounceInRight':''}}" src='/images/dingyi/2.jpg'></image>
+                <view class="circle {{scrollindex==1?'circle1':''}}">
+                    <image class="img5" src='/images/dingyi/5.png'></image>
+                    <image class="img6" src='/images/dingyi/6.png'></image>
+                </view>                
+                <view class="circle {{scrollindex==1?'circle2':''}}">
+                    <image class="img5" src='/images/dingyi/5.png'></image>
+                    <image class="img6" src='/images/dingyi/8.png'></image>
+                </view>
+                <view class="circle {{scrollindex==1?'circle3':''}}">
+                    <image class="img5" src='/images/dingyi/5.png'></image>
+                    <image class="img6" src='/images/dingyi/7.png'></image>
+                </view>
+                <view class="circle {{scrollindex==1?'circle4':''}}">
+                    <image class="img5" src='/images/dingyi/5.png'></image>
+                    <image class="img8" src='/images/dingyi/12.png'></image>
+                </view>
+                <view class="circle {{scrollindex==1?'circle5':''}}">
+                    <image class="img7" src='/images/dingyi/11.png'></image>
+                    <image class="img9" src='/images/dingyi/9.png'></image>
+                </view>
+                <view class="circle {{scrollindex==1?'circle6':''}}">
+                    <image class="img7" src='/images/dingyi/11.png'></image>
+                    <image class="img9" src='/images/dingyi/10.png'></image>
+                </view>
+            </view>
+            <view class="imgGroup footImg {{scrollindex==1?'animated imgGrp':''}}">
+                <image class="img4" src='/images/dingyi/4.png'></image>
+                <image class="img3" src='/images/dingyi/3.png'></image>
+            </view>
 		</view>
         <view class="section section03 " style="background: #33CCCC;">
 			<text class="section-maintitle animated {{scrollindex==2?'bounceInLeft':''}}">无缝对接双创服务3</text>
