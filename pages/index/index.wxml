@@ -43,9 +43,54 @@
                 <image class="img3" src='/images/dingyi/3.png'></image>
             </view>
 		</view>
-        <view class="section section03 " style="background: #33CCCC;">
-			<text class="section-maintitle animated {{scrollindex==2?'bounceInLeft':''}}">无缝对接双创服务3</text>
-			<text class="section-subtitle animated {{scrollindex==2?'bounceInLeft':''}}">构筑“云上孵化基地”3</text>
+        <view class="section section03 ">
+			<view class="imgGroup header">
+                <image class="img0 animated {{scrollindex==2?'bounceInRight':''}}" src='/images/technology/1_bg.png'></image>
+                <image class="img1 animated {{scrollindex==2?'bounceInRight':''}}" src='/images/technology/1.png'></image>
+            </view>
+            <view class="imgGroup main">
+                <image class="img2 animated {{scrollindex==2?'bounceInRight':''}}" src='/images/technology/2.jpg'></image>
+                <image class="img3 animated {{scrollindex==2?'bounceInRight':''}}" src='/images/technology/3.png'></image>
+            </view>
+            <view class="imgGroup main">
+                <image class="img2 animated {{scrollindex==2?'bounceInRight':''}}" src='/images/technology/2.jpg'></image>
+                <image class="img4 animated {{scrollindex==2?'bounceInRight':''}}" src='/images/technology/4.png'></image>
+            </view>
 		</view>
+        <view class="section section04 ">
+            <view class="form">
+                <text class="title">入侵检测技术包含哪两类？</text>
+                <view class='select'>
+                    <image class="unselected" data-num='{{sctNum1}}' src="{{imgUrl1}}" bindtap='selectChange1'></image>
+                    <text>A.  特征检测</text>
+                    <image class='endImg' src="/images/answer/end.png" hidden="{{hiddenName}}"></image>
+                </view>
+                <view class='select'>
+                    <image class="unselected" data-num='{{sctNum2}}' src="{{imgUrl2}}" bindtap='selectChange2'></image>
+                    <text>B.  异常检测</text>
+                </view>
+                <view class='select'>
+                    <image class="unselected" data-num='{{sctNum3}}' src="{{imgUrl3}}" bindtap='selectChange3'></image>
+                    <text>C.  人工检测</text>
+                </view>
+                <view class='select'>
+                    <image class="unselected" data-num='{{sctNum4}}' src="{{imgUrl4}}" bindtap='selectChange4'></image>
+                    <text>D.  自动检测</text>
+                </view>
+                <button class="btn" bindtap='btnSumit'>
+                    提交
+                </button>
+            </view>
+            <view class='foot1'></view>
+            <view class='foot2'></view>
+        </view>
+        <view class="section section05 ">
+            <image class="bBg {{scrollindex==4?'aniDown':''}}" src='/images/thanks/bBg.png'></image>
+            <view class="imgGroup main">
+                <image class='bg_hd' src="/images/thanks/bg-hd.png"></image>
+                <image class='thanks' src="/images/thanks/thanks.png"></image>
+            </view>            
+            <image class="footImg animated {{scrollindex==4?'bounceInUp':''}}" src='/images/thanks/foot.png'></image>
+        </view>
     </view>
 </view>
