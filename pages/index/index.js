@@ -1,4 +1,6 @@
 // pages/index/index.js
+//const bgMusic = wx.getBackgroundAudioManager();
+const bgMusic = wx.createInnerAudioContext();
 Page({
     data: {
         musicHide:true,
@@ -22,8 +24,11 @@ Page({
         flg: true
     },
     onReady: function () {
-        this.audioCtx = wx.createAudioContext('audio');
-        this.audioCtx.play()
+        // this.audioCtx = wx.createAudioContext('audio');
+        // this.audioCtx.play()
+        bgMusic.title = "网络检查";
+        bgMusic.src = "/images/media/1.mp3";
+        bgMusic.play();
     },
     onLoad: function() {
         var numMusic = 0;
@@ -141,34 +146,39 @@ Page({
         console.log("scrollTouchend:" + this.data.scrollindex);
         if (this.data.scrollindex == 0) {
             this.setData({
-                musicHide:true,
-                audioUrl: "/images/media/1.mp3"
+                musicHide:true
             })
-            this.audioCtx.play()
+            // this.audioCtx.play()
+            bgMusic.src = "/images/media/1.mp3";
+            bgMusic.play();
         } else if (this.data.scrollindex == 1) {
             this.setData({
-                musicHide: true,
-                audioUrl: "/images/media/2.mp3"
+                musicHide: true
             })
-            this.audioCtx.play()
+            // this.audioCtx.play()
+            bgMusic.src = "/images/media/2.mp3";
+            bgMusic.play();
         } else if (this.data.scrollindex == 2) {
             this.setData({
-                musicHide: true,
-                audioUrl: "/images/media/3.mp3"
+                musicHide: true
             })
-            this.audioCtx.play()
+            // this.audioCtx.play()
+            bgMusic.src = "/images/media/3.mp3";
+            bgMusic.play();
         } else if (this.data.scrollindex == 3) {
             this.setData({
-                musicHide: false,
-                audioUrl: ""
+                musicHide: false
             })
-            this.audioCtx.pause();
+            // this.audioCtx.pause();
+            //bgMusic.src = "";
+            bgMusic.stop();
         } else if (this.data.scrollindex == 4) {
             this.setData({
-                musicHide: true,
-                audioUrl: "/images/media/5.mp3"
+                musicHide: true
             })
-            this.audioCtx.play()
+            // this.audioCtx.play()
+            bgMusic.src = "/images/media/5.mp3";
+            bgMusic.play();
         }
     },
 })

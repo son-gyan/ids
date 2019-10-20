@@ -2,7 +2,7 @@
 <view class='container container-fill'>
     <view class="audio">
         <image class="audioImg" src='{{musicUrl}}' wx-if="{{musicHide}}"></image>
-        <audio id="audio" src="{{audioUrl}}"></audio>
+        <!-- <audio id="audio" src="{{audioUrl}}"></audio> -->
     </view>
     <view class="scroll-fullpage" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="transform:translateY(-{{scrollindex*100}}%);margin-top: {{margintop}}px">
         <view class="section section01">
