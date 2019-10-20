@@ -1,5 +1,9 @@
 <!--pages/index/index.wxml-->
 <view class='container container-fill'>
+    <view class="audio">
+        <image class="audioImg" src='{{musicUrl}}' wx-if="{{musicHide}}"></image>
+        <audio id="audio" src="{{audioUrl}}"></audio>
+    </view>
     <view class="scroll-fullpage" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="transform:translateY(-{{scrollindex*100}}%);margin-top: {{margintop}}px">
         <view class="section section01">
             <image class="img1 animated {{scrollindex==0?'bounceInRight':''}}" src='/images/index/1.png'></image>
@@ -61,23 +65,23 @@
             <view class="form">
                 <text class="title">入侵检测技术包含哪两类？</text>
                 <view class='select'>
-                    <image class="unselected" data-num='{{sctNum1}}' src="{{imgUrl1}}" bindtap='selectChange1'></image>
+                    <image class="unselected" data-num='{{sctNum1}}' src="{{imgUrl1}}" catchtap='selectChange1'></image>
                     <text>A.  特征检测</text>
                     <image class='endImg' src="/images/answer/end.png" hidden="{{hiddenName}}"></image>
                 </view>
                 <view class='select'>
-                    <image class="unselected" data-num='{{sctNum2}}' src="{{imgUrl2}}" bindtap='selectChange2'></image>
+                    <image class="unselected" data-num='{{sctNum2}}' src="{{imgUrl2}}" catchtap='selectChange2'></image>
                     <text>B.  异常检测</text>
                 </view>
                 <view class='select'>
-                    <image class="unselected" data-num='{{sctNum3}}' src="{{imgUrl3}}" bindtap='selectChange3'></image>
+                    <image class="unselected" data-num='{{sctNum3}}' src="{{imgUrl3}}" catchtap='selectChange3'></image>
                     <text>C.  人工检测</text>
                 </view>
                 <view class='select'>
-                    <image class="unselected" data-num='{{sctNum4}}' src="{{imgUrl4}}" bindtap='selectChange4'></image>
+                    <image class="unselected" data-num='{{sctNum4}}' src="{{imgUrl4}}" catchtap='selectChange4'></image>
                     <text>D.  自动检测</text>
                 </view>
-                <button class="btn" bindtap='btnSumit'>
+                <button class="btn" catchtap='btnSumit'>
                     提交
                 </button>
             </view>

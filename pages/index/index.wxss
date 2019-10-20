@@ -1,4 +1,14 @@
 /* pages/index/index.wxss */
+.audio{
+    position: absolute;
+    top:20rpx;
+    right:20rpx;
+    z-index: 99;
+}
+.audio .audioImg{
+    width: 63rpx;
+    height:63rpx;
+}
 .container-fill{
 	height: 100%;
 	overflow: hidden;
