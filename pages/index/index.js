@@ -104,14 +104,27 @@ Page({
                 hiddenName: false
             })
         }
+        // else{
+        //     this.setData({
+        //         hiddenName: true
+        //     })
+        // }
+        this.setData({
+            flg: true
+        })
     },
     scrollTouchstart: function(e) {        
         //debugger
         let py = e.touches[0].pageY;
+        console.log("scrollTouchstart:"+this.data.flg);
+        // if (this.data.flg){
+        //     this.setData({
+        //         starty: py
+        //     })
+        // }
         this.setData({
             starty: py
         })
-        
     },
     scrollTouchmove: function(e) {
         //debugger
@@ -120,6 +133,7 @@ Page({
         this.setData({
             endy: py,
         })
+        console.log("scrollTouchmove:" + this.data.flg);
         if (py - d.starty < 100 && py - d.starty > -100) {
             this.setData({
                 margintop: py - d.starty
@@ -129,11 +143,14 @@ Page({
     scrollTouchend: function(e) {
         //debugger
         let d = this.data;
-        if (d.endy - d.starty > 100 && d.scrollindex > 0) {
+        console.log("scrollTouchend:" + this.data.flg);
+        if (this.data.flg&&d.endy - d.starty > 100 && d.scrollindex > 0) {
+            console.log("d.scrollindex:" + d.scrollindex);
             this.setData({
                 scrollindex: d.scrollindex - 1
             })
-        } else if (d.endy - d.starty < -100 && d.scrollindex < this.data.totalnum - 1) {
+        } else if (this.data.flg &&d.endy - d.starty < -100 && d.scrollindex < this.data.totalnum - 1) {
+            console.log("d.scrollindex:" + d.scrollindex);
             this.setData({
                 scrollindex: d.scrollindex + 1
             })
@@ -167,10 +184,9 @@ Page({
             bgMusic.play();
         } else if (this.data.scrollindex == 3) {
             this.setData({
-                musicHide: false
+                musicHide: false,
+                flg:false
             })
-            // this.audioCtx.pause();
-            //bgMusic.src = "";
             bgMusic.stop();
         } else if (this.data.scrollindex == 4) {
             this.setData({
