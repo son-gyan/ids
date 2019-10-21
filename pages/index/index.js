@@ -121,6 +121,11 @@ Page({
         this.setData({
             scrollindex:0,
             flg: true,
+            hiddenName: true,
+            imgUrl1: '/images/answer/1.png',
+            imgUrl2: '/images/answer/1.png',
+            imgUrl3: '/images/answer/1.png',
+            imgUrl4: '/images/answer/1.png',
             musicHide: true
         })
         bgMusic.src = "/images/media/1.mp3";
