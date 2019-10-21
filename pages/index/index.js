@@ -7,6 +7,7 @@ Page({
         musicUrl:"/images/yinpin1.png",
         audioUrl: "/images/media/1.mp3",
         hiddenName: true,
+        anwerBag:"/images/answer/end.png",
         sctNum1: 1,
         sctNum2: 1,
         sctNum3: 1,
@@ -51,6 +52,7 @@ Page({
         },200)
     },
     selectChange1: function(e) {
+        console.log("123");
         if (this.data.sctNum1 % 2 != 0) {
             this.setData({
                 imgUrl1: '/images/answer/2.png'
@@ -98,30 +100,36 @@ Page({
         }
         this.data.sctNum4++;
     },
-    btnSumit: function() {
+    btnSumit: function() {       
         if (this.data.sctNum1 % 2 == 0 && this.data.sctNum2 % 2 == 0 && this.data.sctNum3 % 2 != 0 && this.data.sctNum4 % 2 != 0) {
             this.setData({
+                anwerBag: "/images/answer/end.png",
+                hiddenName: false
+            })
+        }else{
+            this.setData({
+                anserBag: "/images/answer/error.png",
                 hiddenName: false
             })
         }
-        // else{
-        //     this.setData({
-        //         hiddenName: true
-        //     })
-        // }
         this.setData({
             flg: true
         })
+    },
+    backIndex:function(){
+        this.onLoad();
+        this.setData({
+            scrollindex:0,
+            flg: true,
+            musicHide: true
+        })
+        bgMusic.src = "/images/media/1.mp3";
+        bgMusic.play();
     },
     scrollTouchstart: function(e) {        
         //debugger
         let py = e.touches[0].pageY;
         console.log("scrollTouchstart:"+this.data.flg);
-        // if (this.data.flg){
-        //     this.setData({
-        //         starty: py
-        //     })
-        // }
         this.setData({
             starty: py
         })
@@ -185,7 +193,7 @@ Page({
         } else if (this.data.scrollindex == 3) {
             this.setData({
                 musicHide: false,
-                flg:false
+                flg:false                
             })
             bgMusic.stop();
         } else if (this.data.scrollindex == 4) {

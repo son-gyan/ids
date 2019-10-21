@@ -62,12 +62,15 @@
             </view>
 		</view>
         <view class="section section04 ">
+            <view class="back">
+                <button class="backIndex" catchtap="backIndex">返回首页</button>
+            </view>
             <view class="form">
                 <text class="title">入侵检测技术包含哪两类？</text>
                 <view class='select'>
                     <image class="unselected" data-num='{{sctNum1}}' src="{{imgUrl1}}" catchtap='selectChange1'></image>
                     <text>A.  特征检测</text>
-                    <image class='endImg' src="/images/answer/end.png" hidden="{{hiddenName}}"></image>
+                    <image class='endImg' src="{{anwerBag}}" hidden="{{hiddenName}}"></image>
                 </view>
                 <view class='select'>
                     <image class="unselected" data-num='{{sctNum2}}' src="{{imgUrl2}}" catchtap='selectChange2'></image>
