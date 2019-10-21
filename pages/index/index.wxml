@@ -70,7 +70,7 @@
                 <view class='select'>
                     <image class="unselected" data-num='{{sctNum1}}' src="{{imgUrl1}}" catchtap='selectChange1'></image>
                     <text>A.  特征检测</text>
-                    <image class='endImg' src="{{anwerBag}}" hidden="{{hiddenName}}"></image>
+                    <image class='endImg' src="{{answerBag==1?answerImg1:answerImg2}}" hidden="{{hiddenName}}" wx:if="answerBag==1"></image>
                 </view>
                 <view class='select'>
                     <image class="unselected" data-num='{{sctNum2}}' src="{{imgUrl2}}" catchtap='selectChange2'></image>

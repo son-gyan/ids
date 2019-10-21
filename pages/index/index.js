@@ -7,13 +7,15 @@ Page({
         musicUrl:"/images/yinpin1.png",
         audioUrl: "/images/media/1.mp3",
         hiddenName: true,
-        anwerBag:"/images/answer/end.png",
+        answerBag:'0',
+        answerImg1: "/images/answer/end.png",
+        answerImg2:"/images/answer/error.png",
         sctNum1: 1,
         sctNum2: 1,
         sctNum3: 1,
         sctNum4: 1,
         scrollindex: 0, //当前页面的索引值
-        totalnum: 5, //总共页面数
+        totalnum: 4, //总共页面数
         starty: 0, //开始的位置x
         endy: 0, //结束的位置y
         critical: 100, //触发翻页的临界值
@@ -100,17 +102,21 @@ Page({
         }
         this.data.sctNum4++;
     },
-    btnSumit: function() {       
+    btnSumit: function() { 
+        var that = this;      
         if (this.data.sctNum1 % 2 == 0 && this.data.sctNum2 % 2 == 0 && this.data.sctNum3 % 2 != 0 && this.data.sctNum4 % 2 != 0) {
+            console.log(123);
             this.setData({
-                anwerBag: "/images/answer/end.png",
+                answerBag: '1',
                 hiddenName: false
             })
         }else{
-            this.setData({
-                anserBag: "/images/answer/error.png",
+            console.log(223);
+            that.setData({
+                answerBag: '2',
                 hiddenName: false
             })
+            console.log(that.data.answerBag);
         }
         this.setData({
             flg: true
@@ -201,6 +207,7 @@ Page({
                 flg:false                
             })
             bgMusic.stop();
+            console.log(this.data.answerBag);
         } else if (this.data.scrollindex == 4) {
             this.setData({
                 musicHide: true
